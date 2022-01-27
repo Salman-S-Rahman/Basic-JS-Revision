@@ -29,3 +29,5 @@ var newPrice6 = parseFloat(price6)
 
 var total3 = newPrice3 + newPrice4;
 console.log("Total = " + " " + total3);
+
+// ======== string to float conversion ========
