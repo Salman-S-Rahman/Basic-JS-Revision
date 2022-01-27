@@ -21,3 +21,11 @@ var total2 = newPrice3 + newPrice4;
 console.log("Total = " + " " + total2);
 
 // ======= string to integer conversion ========
+
+var price5 = '43.89';
+var price6 = '42.11';
+var newPrice5 = parseFloat(price5);
+var newPrice6 = parseFloat(price6)
+
+var total3 = newPrice3 + newPrice4;
+console.log("Total = " + " " + total3);
