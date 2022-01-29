@@ -12,3 +12,9 @@ var lengthOfNum = numbers.length;
 console.log("Total Element In Array Is : " + lengthOfNum);
 
 // ======== to know length of an array =====
+
+
+var num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+console.log("Before Replace = " + num);
+num[5] = 555;
+console.log("After Replace = " + num);
