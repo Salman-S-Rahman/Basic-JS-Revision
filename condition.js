@@ -1,4 +1,4 @@
-var number = 50;
+var number = 70;
 
 if (number >= 90) {
     console.log("You Got A+");
