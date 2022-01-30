@@ -18,3 +18,9 @@ var num = [11, 22, 33, 44, 55, 66, 77, 88, 99];
 console.log("Before Replace = " + num);
 num[5] = 555;
 console.log("After Replace = " + num);
+
+
+var num = [55, 31, 13, 22, 55, 86, 55, 11, 22];
+console.log("Before Replace = " + num);
+num[5] = 555;
+console.log("After Replace = " + num);
