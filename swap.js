@@ -21,3 +21,14 @@ p = p - q;
 console.log("After Swap p = " + p + " & q = " + q);
 
 // ============ another way ===============
+var a = 5;
+var b = 7;
+
+console.log("Before Swap a = " + a + " & b = " + b);
+
+[a, b] = [b, a]
+
+console.log("After Swap a = " + a + " & b = " + b);
+
+// ========== js way ===============
+
