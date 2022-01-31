@@ -24,6 +24,6 @@ for (var i = 0; i < studentsName.length; i++) {
 
     }
 }
-console.log("Smallest Name Is : " + tinnyName);
+console.log("Smallest Name Is = : " + tinnyName);
 
 // ================== smallest name in array ================= 
