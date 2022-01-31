@@ -9,6 +9,6 @@ for (var i = 0; i < studentsName.length; i++) {
     }
 
 }
-console.log("Biggest Name : " + bigName);
+console.log("Biggest Name Is : " + bigName);
 
 // ================== biggest name in array ================= 
