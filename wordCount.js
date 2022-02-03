@@ -12,4 +12,4 @@ for (var i = 0; i < words.length; i++) {
 totalWord++;
 console.log(totalWord);
 
-// ============= total word count =============
+// ============= total word count by js =============
