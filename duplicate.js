@@ -12,3 +12,16 @@ for (var i = 0; i < rollNo.length; i++) {
 console.log(duplicate);
 
 // ============ duplicate number removed from array ================
+
+var name = ["Taskin", "Asghar", "Mohib Jan", "Afghan", "Taskin", "Asghar"];
+
+var duplicate = [];
+for (var i = 0; i < name.length; i++) {
+  var element = name[i];
+  if (duplicate.indexOf(element) == -1) {
+    duplicate.push(element);
+  }
+}
+console.log(duplicate);
+
+// ============ duplicate string removed from array ================
