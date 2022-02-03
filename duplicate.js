@@ -24,4 +24,4 @@ for (var i = 0; i < name.length; i++) {
 }
 console.log(duplicate);
 
-// ============ duplicate string removed from array ================
+// ============ duplicate string separeted from array ================
