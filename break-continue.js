@@ -27,4 +27,5 @@ for (var i = 0; i < number.length; i++) {
   }
   console.log(element);
 }
+
 // ======= whenever there is any value bigger than 50, remove them & loop will continue ======
