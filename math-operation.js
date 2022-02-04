@@ -10,3 +10,11 @@ console.log(sum);
 console.log(difference);
 console.log(multiplication);
 console.log(division);
+
+function divisionNumbers(number1, number2) {
+  var division = number1 - number2;
+  return division;
+}
+
+const result = divisionNumbers(50, 40);
+console.log("After Division = " + result);
