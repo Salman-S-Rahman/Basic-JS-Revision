@@ -10,3 +10,5 @@ for (var i = 1; i <= 50; i++) {
     console.log(i);
   }
 }
+
+// ========= given foo, bar & foobar output by condition 
