@@ -11,3 +11,16 @@ for (var i = 0; i < rollNo.length; i++) {
 console.log("Maximum value is = " + maxValue);
 
 // ================ maximum value in array ==================
+var rollNo = [4, 19, 45, 23, 32, 18, 16, 11, 7, 4, 2, 19, 23, 11, 4, 45];
+
+var minValue = rollNo[0];
+
+for (var i = 0; i < rollNo.length; i++) {
+    var element = rollNo[i];
+    if (element < minValue) {
+        minValue = element;
+    }
+}
+console.log("Minimum value is = " + minValue);
+
+// ================ minimum value in array ================== 
