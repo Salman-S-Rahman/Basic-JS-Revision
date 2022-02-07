@@ -15,6 +15,7 @@ while (i <= 10) {
 console.log(factorial);
 
 // ===== factorial in iterative way by while loop =========
+
 function fact(n) {
   var factorial = 1;
   for (var i = 1; i <= n; i++) {
