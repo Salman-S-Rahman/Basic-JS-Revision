@@ -15,4 +15,4 @@ function feet(n) {
 
 feet(4);
 
-// ============ with return value =============
+// ============ function with return value =============
