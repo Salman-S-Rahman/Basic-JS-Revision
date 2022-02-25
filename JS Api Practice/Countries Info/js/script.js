@@ -29,3 +29,13 @@ const displayCountries = (countries) => {
     countriesDiv.appendChild(div);
   });
 };
+
+// ============= all country ============
+
+const loadEuCountries = () => {
+  fetch("https://restcountries.com/v2/regionalbloc/eu")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+};
+
+loadEuCountries();
