@@ -65,3 +65,9 @@ const displayEuCountries = (countries) => {
 };
 
 // ========= eu country shown ==========
+
+const loadEuCountries = () => {
+  fetch("https://restcountries.com/v2/regionalbloc/eu")
+    .then((res) => res.json())
+    .then((data) => displayEuCountries(data));
+};
