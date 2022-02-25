@@ -63,3 +63,5 @@ const displayEuCountries = (countries) => {
     euCountriesDiv.appendChild(div);
   });
 };
+
+// ========= eu country shown ==========
