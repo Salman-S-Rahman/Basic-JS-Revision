@@ -9,8 +9,19 @@ const loadMeals = () => {
 };
 
 const displayMeals = (meals) => {
-  console.log(meals);
+  const singleMeal = document.getElementById("single-Meal");
   meals.forEach((meal) => {
     console.log(meal);
+    const div = document.createElement("div");
+    div.classList.add("col");
+    div.innerHTML = `
+      <div class="card">
+             <img src=${meal.strMealThumb} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title text-center">${meal.strMeal}</h5>
+            </div>
+      </div> 
+    `;
+    singleMeal.appendChild(div);
   });
 };
