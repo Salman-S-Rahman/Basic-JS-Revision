@@ -11,8 +11,8 @@ const loadMeals = () => {
 
 const displayMeals = (meals) => {
   const singleMeal = document.getElementById("single-Meal");
+  singleMeal.textContent = "";
   meals.forEach((meal) => {
-    console.log(meal);
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
