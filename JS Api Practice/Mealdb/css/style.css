@@ -8,3 +8,7 @@
 .nav-item a:hover {
       color: red
 }
+
+.card {
+      cursor: pointer
+}
