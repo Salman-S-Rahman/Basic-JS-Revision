@@ -31,5 +31,16 @@ const displayDrink = (drinkId) => {
   const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`;
   fetch(url)
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => displayDetails(data.drinks));
+};
+
+const displayDetails = (drinks) => {
+  console.log(drinks);
+  const drinkDetails = document.getElementById("drink-details");
+  drinks.forEach((drink) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+            
+    `;
+  });
 };
