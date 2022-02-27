@@ -4,10 +4,16 @@ const error2 = document.getElementById("error2");
 
 const searchField = document.getElementById("search-field");
 
+const singleMeal = document.getElementById("single-Meal");
+
+const mealDetails = document.getElementById("meal-details");
+
 const loadMeals = () => {
   const searchValue = searchField.value;
   if (searchValue == "") {
     error1.style.display = "block";
+    singleMeal.textContent = "";
+    mealDetails.textContent = "";
   } else {
     error1.style.display = "none";
     spinner.style.display = "block";
@@ -16,7 +22,6 @@ const loadMeals = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayMeals(data.meals));
-    searchField.value = "";
   }
 
   const displayMeals = (meals) => {
@@ -42,7 +47,10 @@ const loadMeals = () => {
     } else {
       error2.innerText = `No meal found for "${searchField.value}" search result !`;
       spinner.style.display = "none";
+      singleMeal.textContent = "";
+      mealDetails.textContent = "";
     }
+    searchField.value = "";
   };
 };
 
