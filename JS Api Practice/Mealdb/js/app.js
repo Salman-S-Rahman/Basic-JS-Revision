@@ -1,26 +1,33 @@
 const spinner = document.getElementById("spinner");
+const error1 = document.getElementById("error1");
+const error2 = document.getElementById("error2");
 
 const searchField = document.getElementById("search-field");
 
 const loadMeals = () => {
-  spinner.style.display = "block";
   const searchValue = searchField.value;
-  const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
+  if (searchValue == "") {
+    error1.style.display = "block";
+  } else {
+    error1.style.display = "none";
+    spinner.style.display = "block";
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
 
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => displayMeals(data.meals));
-};
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => displayMeals(data.meals));
+  }
 
-const displayMeals = (meals) => {
-  const singleMeal = document.getElementById("single-Meal");
-  singleMeal.textContent = "";
-  const mealDetails = document.getElementById("meal-details");
-  mealDetails.textContent = "";
-  meals.forEach((meal) => {
-    const div = document.createElement("div");
-    div.classList.add("col");
-    div.innerHTML = `
+  const displayMeals = (meals) => {
+    if (meals) {
+      const singleMeal = document.getElementById("single-Meal");
+      singleMeal.textContent = "";
+      const mealDetails = document.getElementById("meal-details");
+      mealDetails.textContent = "";
+      meals.forEach((meal) => {
+        const div = document.createElement("div");
+        div.classList.add("col");
+        div.innerHTML = `
       <div class="card" onClick="displayMeal(${meal.idMeal})">
              <img src=${meal.strMealThumb} class="card-img-top" alt="...">
             <div class="card-body">
@@ -28,9 +35,14 @@ const displayMeals = (meals) => {
             </div>
       </div> 
     `;
-    singleMeal.appendChild(div);
-    spinner.style.display = "none";
-  });
+        singleMeal.appendChild(div);
+        spinner.style.display = "none";
+      });
+    } else {
+      error2.innerText = `No meal found for "${searchField.value}" search result !`;
+      spinner.style.display = "none";
+    }
+  };
 };
 
 // ===== single meals shown =====

@@ -12,6 +12,8 @@
 .card {
       cursor: pointer
 }
-#spinner{
-  display: none;
+
+#spinner,
+#error1 {
+      display: none;
 }
