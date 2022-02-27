@@ -12,6 +12,8 @@ const loadMeals = () => {
 const displayMeals = (meals) => {
   const singleMeal = document.getElementById("single-Meal");
   singleMeal.textContent = "";
+  const mealDetails = document.getElementById("meal-details");
+  mealDetails.textContent = "";
   meals.forEach((meal) => {
     const div = document.createElement("div");
     div.classList.add("col");
@@ -37,9 +39,8 @@ const displayMeal = (mealId) => {
 };
 
 const displayMealDetails = (meals) => {
-  console.log(meals);
   const mealDetails = document.getElementById("meal-details");
-
+  mealDetails.textContent = "";
   meals.forEach((meal) => {
     const div = document.createElement("div");
     div.innerHTML = `
