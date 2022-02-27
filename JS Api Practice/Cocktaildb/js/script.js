@@ -5,11 +5,16 @@ const error1 = document.getElementById("error1");
 const error2 = document.getElementById("error2");
 
 const loadDrinks = () => {
-  spinner.style.display = "block";
-  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`;
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => displayDrinks(data.drinks));
+  if (searchField.value == "") {
+    error1.style.display = "block";
+  } else {
+    spinner.style.display = "block";
+    error1.style.display = "none";
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => displayDrinks(data.drinks));
+  }
 };
 
 const displayDrinks = (drinks) => {
