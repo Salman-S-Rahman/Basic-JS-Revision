@@ -11,10 +11,9 @@ const loadDrinks = () => {
 const displayDrinks = (drinks) => {
   const singleDrink = document.getElementById("single-drink");
   drinks.forEach((drink) => {
-    console.log(drink);
     const div = document.createElement("div");
     div.innerHTML = `
-      <div class="card" onClick="displayMeal(${drink.idDrink})">
+      <div class="card" onClick="displayDrink(${drink.idDrink})">
              <img src=${drink.strDrinkThumb} class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title text-center">${drink.strGlass}</h5>
@@ -26,3 +25,11 @@ const displayDrinks = (drinks) => {
 };
 
 // ====== single all drink card shown =====
+
+const displayDrink = (drinkId) => {
+  console.log(drinkId);
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => console.log(data));
+};
