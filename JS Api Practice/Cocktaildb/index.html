@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hungry Monster</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+        <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                        <a class="navbar-brand" href="#">
+                                <img src="images/logo.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">About</a>
+                                        <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Recipes</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+                                        </li>
+                                </ul>
+                        </div>
+                </div>
+        </nav>
+        <!-- ======= nav var part end ========= -->
+
+        <section id="meal-part">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-xl-6 mx-auto">
+                                        <div class="input-group my-5">
+                                                <input type="text" class="form-control" placeholder="Search for meal..."
+                                                        aria-label="Recipient's username"
+                                                        aria-describedby="button-addon2" id="search-field">
+                                                <button class="btn btn-danger" type="button" id="button-addon2"
+                                                        onClick="loadMeals()">Button</button>
+                                        </div>
+                                </div>
+                        </div>
+                        <!-- search field -->
+                        <div id="spinner" class="text-center mb-3">
+                                <div class="spinner-grow text-danger" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                </div>
+                        </div>
+                        <!-- spinner part -->
+                        <div class="card-group w-50 mx-auto mb-4" id="meal-details">
+
+                        </div>
+                        <!-- meal details -->
+
+                        <div class="row row-cols-1 row-cols-md-4 g-4" id="single-Meal">
+
+                        </div>
+                        <!-- single meal -->
+                        <div id="error1">
+                                <h3 class="text-danger text-center">No meal is found.</h3>
+                        </div>
+                        <!-- empty string error -->
+                        <div id="error2" class="text-danger text-center fw-bold fs-4">
+                        </div>
+                        <!-- empty string error -->
+
+
+
+
+                </div>
+        </section>
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/app.js"></script>
+</body>
+
+</html>
