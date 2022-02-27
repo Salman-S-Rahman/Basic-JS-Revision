@@ -1,4 +1,4 @@
-/* .nav-item a {
+.nav-item a {
       color: black;
       font-size: 18px;
       font-weight: bold;
@@ -6,7 +6,7 @@
 }
 
 .nav-item a:hover {
-      color: red
+      color: orange;
 }
 
 .card {
@@ -16,4 +16,4 @@
 #spinner,
 #error1 {
       display: none;
-} */
+}
