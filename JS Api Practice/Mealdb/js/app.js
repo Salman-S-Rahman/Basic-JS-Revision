@@ -16,6 +16,7 @@ const loadMeals = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => displayMeals(data.meals));
+    searchField.value = "";
   }
 
   const displayMeals = (meals) => {
