@@ -1,6 +1,9 @@
+const spinner = document.getElementById("spinner");
+
 const searchField = document.getElementById("search-field");
 
 const loadMeals = () => {
+  spinner.style.display = "block";
   const searchValue = searchField.value;
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`;
 
@@ -26,12 +29,14 @@ const displayMeals = (meals) => {
       </div> 
     `;
     singleMeal.appendChild(div);
+    spinner.style.display = "none";
   });
 };
 
 // ===== single meals shown =====
 
 const displayMeal = (mealId) => {
+  spinner.style.display = "block";
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
   fetch(url)
     .then((res) => res.json())
@@ -79,6 +84,7 @@ const displayMealDetails = (meals) => {
       }
     }
   });
+  spinner.style.display = "none";
 };
 
 // ====== meal details =======
