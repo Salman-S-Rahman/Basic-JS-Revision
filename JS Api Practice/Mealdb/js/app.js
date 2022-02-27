@@ -26,6 +26,7 @@ const loadMeals = () => {
 
   const displayMeals = (meals) => {
     if (meals) {
+      error2.innerText = "";
       const singleMeal = document.getElementById("single-Meal");
       singleMeal.textContent = "";
       const mealDetails = document.getElementById("meal-details");
