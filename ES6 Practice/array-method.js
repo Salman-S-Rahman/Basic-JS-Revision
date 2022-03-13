@@ -34,3 +34,12 @@ const onlyLaptop = products.find((product) => product.name === "Laptop");
 console.log(onlyLaptop);
 
 // ==== find always return an array & can return only one value which value will first meet the condition ===
+
+//5-includes
+
+const productsDetails = products.filter((product) =>
+  product.name.includes("a")
+);
+console.log(productsDetails);
+
+// ====== filter with includes will filter those value whose name carry a word "a" ======
