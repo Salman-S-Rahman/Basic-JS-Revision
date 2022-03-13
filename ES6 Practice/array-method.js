@@ -23,9 +23,14 @@ const productBrand = products.map((product) => product.brand);
 
 // 3-filter
 
-const onlyLaptops = products.filter((product) => product.name === "Laptop");
-console.log(onlyLaptops);
+const allLaptops = products.filter((product) => product.name === "Laptop");
+console.log(allLaptops);
 
 // ==== filter always return an array & can return multiple value if match the condition ===
 
+// 4-find
 
+const onlyLaptop = products.find((product) => product.name === "Laptop");
+console.log(onlyLaptop);
+
+// ==== find always return an array & can return only one value which value will first meet the condition ===
