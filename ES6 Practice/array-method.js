@@ -7,5 +7,10 @@ const products = [
   { name: "Camera", price: 1100, brand: "Casio", color: "Moon Light" },
 ];
 
-const allProduct = products.map((product) => product.name);
-console.log(allProduct);
+const productName = products.map((product) => product.name);
+// console.log(productName);
+
+const productBrand = products.map((product) => product.brand);
+// console.log(productBrand);
+
+// ======== map only apply for array or, for array objects * map always return something in a new array. ==========
