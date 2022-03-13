@@ -13,4 +13,8 @@ const productName = products.map((product) => product.name);
 const productBrand = products.map((product) => product.brand);
 // console.log(productBrand);
 
-// ======== map only apply for array or, for array objects * map always return something in a new array. ==========
+// ======== map only apply for array or, for array objects . Map always return something in a new array. ==========
+
+products.forEach((product) => console.log(product.color));
+
+// ======== forEach only apply for array or, for array objects . forEach doesn't return anything & can use instantly. ==========
