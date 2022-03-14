@@ -1,3 +1,12 @@
+const displayLocalStorageCart = () =>{
+  const cart = getCart();
+   for(const productName in cart){
+     displayProducts(productName)  
+  }
+}
+
+
+
 const addItem = () => {
   const productInput = document.getElementById("product-input");
   const productName = productInput.value;
@@ -35,3 +44,7 @@ const addToLocalStorage = (productName) => {
   const cartStringified = JSON.stringify(cart);
   localStorage.setItem("cart", cartStringified);
 };
+
+
+displayLocalStorageCart()
+
